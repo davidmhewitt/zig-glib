@@ -1,3 +1,5 @@
+pub usingnamespace @import("src/constants.zig");
+
 pub const AppInfo = @import("src/AppInfo.zig").AppInfo;
 pub const Application = @import("src/Application.zig").Application;
 pub const Bytes = @import("src/Bytes.zig").Bytes;
