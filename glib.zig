@@ -8,3 +8,4 @@ pub const Icon = @import("src/Icon.zig").Icon;
 pub const ListModel = @import("src/ListModel.zig").ListModel;
 pub const ListStore = @import("src/ListStore.zig").ListStore;
 pub const Object = @import("src/Object.zig").Object;
+pub const Settings = @import("src/Settings.zig").Settings;
