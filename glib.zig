@@ -4,6 +4,7 @@ pub const AppInfo = @import("src/AppInfo.zig").AppInfo;
 pub const Application = @import("src/Application.zig").Application;
 pub const Bytes = @import("src/Bytes.zig").Bytes;
 pub const DesktopAppInfo = @import("src/DesktopAppInfo.zig").DesktopAppInfo;
+pub const Error = @import("src/Error.zig").Error;
 pub const File = @import("src/File.zig").File;
 pub const Icon = @import("src/Icon.zig").Icon;
 pub const ListModel = @import("src/ListModel.zig").ListModel;
