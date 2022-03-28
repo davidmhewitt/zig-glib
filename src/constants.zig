@@ -12,3 +12,12 @@ pub const ApplicationFlags = struct {
     pub const AllowReplacement = c.G_APPLICATION_ALLOW_REPLACEMENT;
     pub const Replace = c.G_APPLICATION_REPLACE;
 };
+
+pub const IOCondition = struct {
+    pub const In = c.G_IO_IN;
+    pub const Out = c.G_IO_OUT;
+    pub const Pri = c.G_IO_PRI;
+    pub const Err = c.G_IO_ERR;
+    pub const Hup = c.G_IO_HUP;
+    pub const Nval = c.G_IO_NVAL;
+};

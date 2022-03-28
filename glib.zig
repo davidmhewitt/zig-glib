@@ -9,11 +9,16 @@ pub const File = @import("src/File.zig").File;
 pub const Icon = @import("src/Icon.zig").Icon;
 pub const ListModel = @import("src/ListModel.zig").ListModel;
 pub const ListStore = @import("src/ListStore.zig").ListStore;
+pub const MainContext = @import("src/MainContext.zig").MainContext;
+pub const MainLoop = @import("src/MainLoop.zig").MainLoop;
 pub const Object = @import("src/Object.zig").Object;
 pub const Settings = @import("src/Settings.zig").Settings;
 
 extern fn g_free(pointer: ?*const anyopaque) void;
 pub const free = g_free;
+
+extern fn g_unix_fd_add(fd: i32, condition: c_int, function: fn (fd: i32, condition: c_int, user_data: ?*anyopaque) callconv(.C) bool, user_data: ?*anyopaque) u32;
+pub const unix_fd_add = g_unix_fd_add;
 
 fn refAllDeclsRecursive(comptime T: type) void {
     comptime {
