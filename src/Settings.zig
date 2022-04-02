@@ -15,7 +15,7 @@ pub const Settings = extern struct {
     /// Caller owns returned memory, must be freed with GLib.free
     pub const getString = g_settings_get_string;
 
-    pub fn connectChanged(self: *Self, callback: fn (key: [*c]const u8, data: ?*anyopaque) callconv(.C) void, data: ?*anyopaque) u64 {
+    pub fn connectChanged(self: *Self, callback: fn (self: *Self, key: [*c]const u8, data: ?*anyopaque) callconv(.C) void, data: ?*anyopaque) u64 {
         return c.g_signal_connect_data(self, "changed", @ptrCast(c.GCallback, callback), data, null, @as(c.GConnectFlags, 0));
     }
 
